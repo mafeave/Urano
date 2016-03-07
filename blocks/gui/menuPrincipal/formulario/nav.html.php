@@ -14,7 +14,7 @@ $rutaUrlBloque = $this->miConfigurador->getVariableConfiguracion ( "rutaUrlBloqu
               <img src="<?php echo $rutaUrlBloque.'images/escudo.png'?>" alt="Perfil" class="hidden-xs hidden-sm img-responsive img-rounded escudo" />
             </div>
             <div class="col-xs-12 col-sm-10 col-lg-8">
-              <h1 class="nameline">PAULO CESAR CORONADO SANCHEZ</h1>
+              <h1 class="nameline">JORGE ULISES USECHE CUELLAR</h1>
               <h1 class="titleline">Msc. Teleinformática</h1>
               <h1 class="closesession"><a href="#">Cerrar Sesión</a></h1>
             </div>

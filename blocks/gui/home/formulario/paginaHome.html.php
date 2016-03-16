@@ -10,7 +10,7 @@ $rutaUrlBloque = $this->miConfigurador->getVariableConfiguracion ( "rutaUrlBloqu
     <div class="row">
       <div class="col-sm-6">
         <h1>Horario Clase</h1>
-        <img src="<?php echo $rutaUrlBloque.'images/horario.png'?>" alt="Perfil" class="img-responsive img-rounded" style="width:100%;" />
+        
       </div>
       <div class="col-sm-6">
         <h1>Notificaciones</h1>

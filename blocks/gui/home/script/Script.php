@@ -14,15 +14,15 @@ if($esteBloque["grupo"]==""){
 }
 
 if(isset($funcion[0])){
-foreach ($funcion as $clave=>$nombre){
-	if(!isset($embebido[$clave])){
-		echo "\n<script type='text/javascript' src='".$rutaBloque."/script/".$nombre."'>\n</script>\n";
-	}else{
-		echo "\n<script type='text/javascript'>";
-		include($nombre);
-		echo "\n</script>\n";
+	foreach ($funcion as $clave=>$nombre){
+		if(!isset($embebido[$clave])){
+			echo "\n<script type='text/javascript' src='".$rutaBloque."/script/".$nombre."'>\n</script>\n";
+		}else{
+			echo "\n<script type='text/javascript'>";
+			include($nombre);
+			echo "\n</script>\n";
+		}
 	}
 }
-}
-
+include ("ajax.php");
 ?>

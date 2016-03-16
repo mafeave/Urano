@@ -17,6 +17,7 @@ include_once ("core/crypto/Encriptador.class.php");
 
 // Para evitar redefiniciones de clases el nombre de la clase del archivo funcion debe corresponder al nombre del bloque
 // en camel case precedido por la palabra Funcion
+
 class Funcion {
 	var $sql;
 	var $funcion;
@@ -26,6 +27,7 @@ class Funcion {
 	var $error;
 	var $miRecursoDB;
 	var $crypto;
+	
 	function verificarCampos() {
 		include_once ($this->ruta . "/funcion/verificarCampos.php");
 		if ($this->error == true) {
@@ -57,6 +59,12 @@ class Funcion {
 	
 		return $resultado;
 	}
+	
+    function procesarFormulario() {
+        include_once ($this->ruta . "funcion/formProcessor.php");
+        return $resultado;
+    }
+	
 	function procesarAjax() {
 		include_once ($this->ruta . "funcion/procesarAjax.php");
 	}
@@ -69,7 +77,9 @@ class Funcion {
 		// en la carpeta funcion
 		
 		// Importante: Es adecuado que sea una variable llamada opcion o action la que guie el procesamiento:
-		
+		if (isset ( $_REQUEST ['procesarAjax'] )) {
+            $this->procesarAjax ();
+        } 
 		if (isset ( $_REQUEST ['opcion'] )) {		
 			switch ($_REQUEST ['opcion']) {		
 				case "logout" :
@@ -81,7 +91,7 @@ class Funcion {
 			}
 		} else {
 			$_REQUEST ['opcion'] = "mostrar";
-			include_once ($this->ruta . "/funcion/formProcessor.php");
+			//include_once ($this->ruta . "/funcion/formProcessor.php");
 		}
 		
 		return $resultado;

@@ -1,6 +1,4 @@
 
-
-@import url('css/bootstrap-datetimepicker.css');
 @import url('css/font-awesome.min.css');
 @import url('css/bootstrap.min.css');
 @import url('css/animate.css');
@@ -21,7 +19,7 @@ a{
     -o-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    border: 1px solid #777;
+    /*border: 1px solid #777;*/
     color: #777;
 }
 

@@ -26,31 +26,22 @@ $urlFinal = $url . $cadena;
 
 ?>
 
-
 <script type='text/javascript'>
-
-
 $(document).ready(function() {
 	  $(window).load(function() {
 				
 	              $.ajax({
-	
 	                 url: "<?php echo $urlFinal; ?>",
 	                 
 	                 success: function(data){
 	                	 $('#mynew').append(data);
 	                     $('#mynew').addClass('animated zoomIn').fadeIn();
 	                     setTimeout(function(){$('#mynew').removeClass('animated zoomIn');},1500);
-	                 //----------------------------------------------------------------------------
-	                       
-	                 //----------------------------------------------------------------------------
 	                 }
 
 	        });
 	//=============================================================================
 	    });
 	});
-
-
 
 </script>

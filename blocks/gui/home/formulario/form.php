@@ -104,9 +104,16 @@ class Formulario {
 	<div class="row">
 		<div class="col-sm-6">
 			<h1>Horario Clase</h1>
-			<h4><?php echo $fecha; ?></h4>
-		<?php 
 			
+		<?php 
+		$arrayMeses = array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+   		$arrayDias = array( 'Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado');
+     
+   		
+		?>
+			<h5><?php echo $arrayDias[date('w')].", ".date('d')." de ".$arrayMeses[date('m')-1]." de ".date('Y');	 ?></h5>
+		<?php 
+		
 		$esteCampo = 'horario';
 		$atributos ['id'] = $esteCampo;
 		$atributos ['estiloEnLinea'] = 'width: 100%; height: 90%; overflow-y: scroll;';

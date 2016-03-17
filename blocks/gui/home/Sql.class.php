@@ -213,7 +213,7 @@ class Sql extends \Sql {
 
 				$cadenaSql .= 'WHERE ';
 				$cadenaSql .= "PLANT.ESTADO='A' ";
-				$cadenaSql .= "AND PLANT.DOCENTE = '79709508' ";
+				$cadenaSql .= "AND PLANT.DOCENTE = '79370039' ";
 				$cadenaSql .= 'ORDER BY PLANT.DOCENTE,PLANT.DIA_NRO, PLANT.HORA';
 				//echo $cadenaSql;
 				break;
